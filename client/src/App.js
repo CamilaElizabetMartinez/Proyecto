@@ -1,9 +1,10 @@
-import Footer from "./Components/Footer";
-
+import Footer from "./components/Footer/Footer";
+import Router from './routers/Router';
 
 function App() {
   return (
-    <div>     
+    <div className="d-flex flex-column vh-100">     
+      <Router />
       <Footer />
     </div>
   );
