@@ -2,6 +2,8 @@ import CardGroup from 'react-bootstrap/CardGroup';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
+import "./card.css"
+
 
 export default function Cards() {
     return (
