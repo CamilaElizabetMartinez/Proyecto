@@ -1,7 +1,7 @@
 import Carousel from 'react-bootstrap/Carousel';
 import "./carousel.css";
 
-export default function Cards() {
+export default function carousel() {
     return (
         <Carousel>
             <Carousel.Item interval={10000}>
