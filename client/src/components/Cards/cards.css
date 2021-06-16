@@ -1,0 +1,18 @@
+#cards{
+    margin: 10px;
+}
+
+.cardLink{
+    margin: 25px;
+}
+
+.cardsP{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: center; 
+}
+
+.cardsTitle{
+    text-align: center;
+}

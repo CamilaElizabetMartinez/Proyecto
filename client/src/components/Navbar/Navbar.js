@@ -3,7 +3,7 @@ import './navbar.css';
 
 export default function Navbar() {
     return (
-        <nav className="navbar navbar-expand navbar-light bg-light">
+        <nav className="navbar navbar-expand navbar-light bg-light Navbar">
             <div className="mx-auto">
 
                 <ul className="navbar-nav mr-auto">

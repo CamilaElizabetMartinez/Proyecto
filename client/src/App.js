@@ -3,7 +3,7 @@ import Router from './routers/Router';
 
 function App() {
   return (
-    <div className="d-flex flex-column vh-100">     
+    <div className="d-flex flex-column">     
       <Router />
       <Footer />
     </div>

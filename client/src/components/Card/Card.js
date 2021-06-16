@@ -9,7 +9,7 @@ export default function Cards() {
     return (
         <CardGroup>
             <Col xl="4" xs="12">
-                <Card>
+                <Card id="card">
                     <Card.Img variant="top" src="" />
                     <Card.Body>
                         <Card.Title>Card title</Card.Title>
@@ -25,7 +25,7 @@ export default function Cards() {
                 </Card>
             </Col>
             <Col xl="4" xs="12">
-                <Card>
+                <Card id="card">
                     <Card.Img variant="top" src="" />
                     <Card.Body>
                         <Card.Title>Card title</Card.Title>
@@ -41,7 +41,7 @@ export default function Cards() {
                 </Card>
             </Col>
             <Col xl="4" xs="12">
-                <Card>
+                <Card id="card">
                     <Card.Img variant="top" src="" />
                     <Card.Body>
                         <Card.Title>Card title</Card.Title>

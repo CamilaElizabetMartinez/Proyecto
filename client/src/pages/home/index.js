@@ -32,7 +32,7 @@ function Home() {
           </div>
           <div className="row">
             <div className="col-md-6">
-              <img src="" alt="" />
+              <img src="/Images/home/enrique.jpeg" alt="" />
             </div>
             <div className="col-md-6">
               <p> </p>

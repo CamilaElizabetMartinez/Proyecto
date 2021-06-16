@@ -1,48 +1,35 @@
-/* #aboutUs{
-    margin-top: 60px
-};
+/* CAROUSEL */
+#carousel{
+    margin-top:60px;
+}
 
+/* PRODUCTORES DESTACADOS */
 #featuredProducers{
     margin-top: 60px;
-};
+}
 
+#h1FeaturedProducers{
+    margin-top: 10px;
+}
+
+/* NOSOTROS */
+#aboutUs{
+    margin-top: 60px;
+}
 
 #h1AboutUs{
+    margin-top: 10px;
+    color: black;
+   
+}
+
+#pAboutUs{
+    margin-left: 5px;
     color: black;
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
     height: 138px;
     line-height: 138px;
-};
+}
 
-
-
-/* CAROUSEL */
-#carousel{
-    margin-top:60px;
-};
-
-/* PRODUCTORES DESTACADOS */
-#featuredProducers{
-    margin-top: 60px;
-};
-
-#h1FeaturedProducers{
-    margin-top: 10px;
-};
-
-/* NOSOTROS */
-#aboutUs{
-    margin-top: 60px;
-};
-
-#h1AboutUs{
-    margin-top: 10px;
-    color: black;
-   
-};
-
-#pAboutUs{
-    margin-left: 5px;
-};
