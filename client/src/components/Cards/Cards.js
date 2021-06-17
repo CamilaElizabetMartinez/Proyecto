@@ -12,8 +12,10 @@ function Cards() {
                             <p class="card-text cardsP">GUTENBEER</p>
                             <p class="card-text cardsP"><small class="text-muted"> Cervezas artesanales, todo tipo de variedad</small></p>
                             <div className="row">
-                                <div className="col-xl-6">
+                                <div className="col-xl-6 col-xs-12 text-align-center">
                                     <a className="cardLink" href="https://developer.mozilla.org/">Ver perfil</a>
+                                </div>
+                                <div className="col-xl-6 col-xs-12 text-align-center">
                                     <a className="cardLink" href="https://developer.mozilla.org/">Comprar</a>
                                 </div>
                             </div>

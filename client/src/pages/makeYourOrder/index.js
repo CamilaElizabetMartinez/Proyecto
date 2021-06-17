@@ -1,8 +1,6 @@
 import Cards from '../../components/Cards/Cards';
 import './makeYourOrder.css';
 
-
-
 function MakeYourOrder() {
     return (
         <div>
@@ -22,14 +20,17 @@ function MakeYourOrder() {
                             <div className="categorys">
                                 <h4 className="categorysTitle">CATEGORÍAS</h4>
                             </div>
-                            <ul>       
-                                <li><a href="https://developer.mozilla.org/">CERVEZA ARTESANAL</a></li>
-                                <li><a href="https://developer.mozilla.org/">CONSERVA</a></li>
-                                <li><a href="https://developer.mozilla.org/">FRUTA Y VERDURA</a></li>
-                                <li><a href="https://developer.mozilla.org/">LECHE Y LACTEO</a></li>
-                                <li><a href="https://developer.mozilla.org/">MIEL</a></li>
-                                <li><a href="https://developer.mozilla.org/">VINO</a></li>
-                            </ul>
+                            <div className="ulLi">
+                                <ul>
+                                    <li><a href="https://developer.mozilla.org/">CERVEZA ARTESANAL</a></li>
+
+                                    <li><a href="https://developer.mozilla.org/">CONSERVA</a></li>
+                                    <li><a href="https://developer.mozilla.org/">FRUTA Y VERDURA</a></li>
+                                    <li><a href="https://developer.mozilla.org/">LECHE Y LACTEO</a></li>
+                                    <li><a href="https://developer.mozilla.org/">MIEL</a></li>
+                                    <li><a href="https://developer.mozilla.org/">VINO</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
 

@@ -23,3 +23,7 @@ a{
 a:hover{
   color: black;
 }
+
+.text-align-center{
+  text-align: center;
+}

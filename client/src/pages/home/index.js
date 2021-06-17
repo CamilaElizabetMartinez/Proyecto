@@ -13,7 +13,10 @@ function Home() {
         <div className="container">
           <div className="row">
             <div className="col-12">
+              <div className="banner bannerProductoresDestacados" style={{ backgroundImage: "url(/Images/home/productores.jpg)" }}>
               <h1>PRODUCTORES DESTACADOS</h1>
+
+              </div>
             </div>
           </div>
           <div className="row">

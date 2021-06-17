@@ -12,10 +12,17 @@
   margin-top: 10px;
 }
 
+.bannerProductoresDestacados{
+  height: 176px;
+  line-height: 176px;
+  background-position: 0 333%;
+  background-size: cover;
+  background:no-repeat;
+}
+
 /* NOSOTROS */
 #aboutUs {
   margin-top: 60px;
-  
 }
 
 .h1AboutUs {
@@ -24,10 +31,10 @@
 }
 
 .pAboutUs {
-      margin-left: 20px;
-      color: black;
-      font-weight: 700;
- /*  text-overflow: ellipsis;
+  /*  margin-left: 10px; */
+  color: black;
+  font-weight: 700;
+  /*  text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap; */
   /* modificar el parrafo para que se vea a lo largo */

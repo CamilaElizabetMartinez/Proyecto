@@ -21,3 +21,21 @@
     padding: 0 15px;
 }
 
+/* CATEGORIAS */
+
+.categoryList{
+    margin-top: 12px;
+}
+.categorys{
+    margin-left: 36px;
+    
+}
+
+li{
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.ulLi{
+    margin-top: 80px;
+}
