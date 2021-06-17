@@ -22,15 +22,13 @@ function MakeYourOrder() {
                             <div className="categorys">
                                 <h4 className="categorysTitle">CATEGORÍAS</h4>
                             </div>
-                            <ul>
-                                
+                            <ul>       
                                 <li><a href="https://developer.mozilla.org/">CERVEZA ARTESANAL</a></li>
                                 <li><a href="https://developer.mozilla.org/">CONSERVA</a></li>
                                 <li><a href="https://developer.mozilla.org/">FRUTA Y VERDURA</a></li>
                                 <li><a href="https://developer.mozilla.org/">LECHE Y LACTEO</a></li>
                                 <li><a href="https://developer.mozilla.org/">MIEL</a></li>
                                 <li><a href="https://developer.mozilla.org/">VINO</a></li>
-
                             </ul>
                         </div>
                     </div>

@@ -1,61 +1,62 @@
-import CardGroup from 'react-bootstrap/CardGroup';
-import Card from 'react-bootstrap/Card';
-import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
 import "./card.css"
 
 
 export default function Cards() {
     return (
-        <CardGroup>
-            <Col xl="4" xs="12">
-                <Card id="card">
-                    <Card.Img variant="top" src="" />
-                    <Card.Body>
-                        <Card.Title>Card title</Card.Title>
-                        <Card.Text>
-                            This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This card has even longer content than the first to.
-                        </Card.Text>
-                    </Card.Body>
-                    <Card.Footer>
-                        <small className="text-muted">Last updated 3 mins ago</small>
-                    </Card.Footer>
-                    <Button href="#">Vér perfil</Button>
-                </Card>
-            </Col>
-            <Col xl="4" xs="12">
-                <Card id="card">
-                    <Card.Img variant="top" src="" />
-                    <Card.Body>
-                        <Card.Title>Card title</Card.Title>
-                        <Card.Text>
-                            This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This card has even longer content than the first to.
-                        </Card.Text>
-                    </Card.Body>
-                    <Card.Footer>
-                        <small className="text-muted">Last updated 3 mins ago</small>
-                    </Card.Footer>
-                    <Button href="#">Vér perfil</Button>
-                </Card>
-            </Col>
-            <Col xl="4" xs="12">
-                <Card id="card">
-                    <Card.Img variant="top" src="" />
-                    <Card.Body>
-                        <Card.Title>Card title</Card.Title>
-                        <Card.Text>
-                            This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This card has even longer content than the first to.
-                        </Card.Text>
-                    </Card.Body>
-                    <Card.Footer>
-                        <small className="text-muted">Last updated 3 mins ago</small>
-                    </Card.Footer>
-                    <Button href="#">Vér perfil</Button>
-                </Card>
-            </Col>
-        </CardGroup>
+        <div className="row">
+            <div class="card-group">
+
+                <div className="col-xl-4">
+                    <div class="card" id="cards">
+                        <img src="/Images/cards/lorena.jpeg" class="card-img-top" alt="..."></img>
+                        <div class="card-body">
+                            <h5 class="card-title cardsTitle">Enrique</h5>
+                            <p class="card-text cardsP">GUTENBEER</p>
+                            <p class="card-text cardsP"><small class="text-muted"> Cervezas artesanales, todo tipo de variedad</small></p>
+                            <div className="row">
+                                <div className="col-xl-6">
+                                    <a className="cardLink" href="https://developer.mozilla.org/">Ver perfil</a>
+                                    <a className="cardLink" href="https://developer.mozilla.org/">Comprar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="col-xl-4">
+                    <div class="card" id="cards">
+                        <img src="/Images/cards/julio.jpeg" class="card-img-top" alt="..."></img>
+                        <div class="card-body">
+                            <h5 class="card-title cardsTitle">Julio</h5>
+                            <p class="card-text cardsP">La quinta de Julio</p>
+                            <p class="card-text cardsP"><small class="text-muted">Frutas y verduras ORGANICAS</small></p>
+                            <div className="row">
+                                <div className="col-xl-6">
+                                    <a className="cardLink" href="https://developer.mozilla.org/">Ver perfil</a>
+                                    <a className="cardLink" href="https://developer.mozilla.org/">Comprar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="col-xl-4">
+                    <div class="card" id="cards">
+                        <img src="/Images/cards/lorena.jpeg" class="card-img-top" alt="..."></img>
+                        <div class="card-body">
+                            <h5 class="card-title cardsTitle">Lorena</h5>
+                            <p class="card-text cardsP">Milks veget</p>
+                            <p class="card-text cardsP"><small class="text-muted">Todo tipo de variedad de leches de semillas </small></p>
+                            <div className="row">
+                                <div className="col-xl-6">
+                                    <a className="cardLink" href="https://developer.mozilla.org/">Ver perfil</a>
+                                    <a className="cardLink" href="https://developer.mozilla.org/">Comprar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     );
 };

@@ -7,7 +7,7 @@ export default function carousel() {
             <Carousel.Item interval={10000}>
                 <img
                     className="d-block w-150"
-                    src={""}
+                    src={"/Images/carousel/canicas.jpeg"}
                     alt="First slide"
                     width="100%"
                 />
@@ -19,7 +19,7 @@ export default function carousel() {
             <Carousel.Item interval={10000}>
                 <img
                     className="d-block w-250"
-                    src={""}
+                    src={"/Images/carousel/canicas.jpeg"}
                     alt="Second slide"
                     width="100%"
                 />
@@ -31,7 +31,7 @@ export default function carousel() {
             <Carousel.Item>
                 <img
                     className="d-block w-300"
-                    src={""}
+                    src={"/Images/carousel/canicas.jpeg"}
                     alt="Third slide"
                     width="100%"
                 />
