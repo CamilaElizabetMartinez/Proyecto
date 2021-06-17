@@ -6,7 +6,7 @@ import './makeYourOrder.css';
 function MakeYourOrder() {
     return (
         <div>
-            <div className="bannerIndexMakeYourOrder banner" style={{ backgroundImage: "url(/Images/makeYourOrder/productores.jpg)" }}>
+            <div className="bannerIndexMakeYourOrder banner" style={{ backgroundImage: "url(/Images/makeYourOrder/productoresbanner.jpg)" }}>
                 <div className="bannerTitle">
                     <h1 id="h1MakeYourOrder">PRODUCTORES</h1>
                 </div>

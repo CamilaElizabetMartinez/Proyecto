@@ -1,19 +1,17 @@
 /* Banner-Titulo */
 .bannerIndexMakeYourOrder{
     height: 176px;
-    background-size: cover;
     line-height: 176px;
-    background-position: -19% 1%;
+    background-position: 0 128%;
     background-size: cover;
  
 }
 
-/* .bannerTitle{
+.bannerTitle{
     text-align: center;
     display: block;
-    background: rgba(0, 0, 0, 0.5);
    
-} */
+}
 
 #h1MakeYourOrder{
     color: #fff;
