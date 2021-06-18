@@ -6,18 +6,12 @@
 /* PRODUCTORES DESTACADOS */
 #featuredProducers {
   margin-top: 60px;
+  background-color: #f3e9b4;
+
 }
 
 #h1FeaturedProducers {
-  margin-top: 10px;
-}
-
-.bannerProductoresDestacados{
-  height: 176px;
-  line-height: 176px;
-  background-position: 0 333%;
-  background-size: cover;
-  background:no-repeat;
+  margin-top: 5px;
 }
 
 /* NOSOTROS */
@@ -25,7 +19,7 @@
   margin-top: 60px;
 }
 
-.h1AboutUs {
+.h1AboutUsHome {
   margin-top: 10px;
   color: black;
 }
