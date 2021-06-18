@@ -14,7 +14,7 @@ function JoinAsAproducer() {
                             </h4>
                         </div>
 
-                        <div class="inputBlock">
+                        <div className="inputBlock">
                             <input className="form" name="name"    type="text"   placeholder="Nombre" /> 
                             <input className="form" name="surName" type="text"   placeholder="Apellido" />
                             <input className="form" name="country" type="text"   placeholder="País" />
