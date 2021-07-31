@@ -1,12 +1,24 @@
-import React from "react";
-import './footer.css'
+import './footer.css';
+import 'font-awesome/css/font-awesome.min.css';
 
-function Footer() {
+export default function Footer() {
     return (
-        <div className="py-5 text-center bg-dark text-light footer">
-            <h3>Footer - Copyright &copy; 2021</h3>
-        </div>
-    );
-};
+        <div className="footer">
 
-export default Footer;
+            <div className="contact">
+                <h3>Contacto</h3>
+                <p>comemoscomopensamos@gmail.com</p>
+                <p>722419648</p>
+            </div>
+           
+
+            <div className="icons">
+                <i className="fa fa-linkedin fa-2x icon"></i>
+                <i class="fa fa-twitter-square fa-2x icon"></i>
+                <i className="fa fa-instagram fa-2x icon"></i>
+                <i className="fa fa-facebook-square fa-2x icon"></i>
+            </div>       
+            
+        </div>
+    )
+}

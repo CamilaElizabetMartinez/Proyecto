@@ -1,20 +1,13 @@
-.linksFooter {
-    margin-left: 220px;
-    padding-top: 20px;
-
+.footer {
+    background: rgb(243, 228, 210);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
 }
 
-.contactsFooter{
-    margin-left: 160px;
-    padding-top: 20px;
-}
+.icon {
+ padding-right: 10px;
 
-.containerFooter {
-    display:flex;
-    color:black;
-    font-size: 15px;
-    font-weight:bolder;
-    display:flex;
-    background-color:#E9ECEF;
-    
-} 
+}
