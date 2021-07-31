@@ -1,5 +1,6 @@
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import Navbar from "../components/Navbar/Navbar";
+import Footer from "../components/Footer/Footer";
 
 import home from "../pages/home";
 import news from "../pages/news";
@@ -15,7 +16,6 @@ export default function Router() {
         <div>
             <BrowserRouter>
                 <Navbar />
-
                 <Switch>
                     <Route exact path="/" component={home}/>
                     <Route path="/noticias" component={news}/>
@@ -26,6 +26,7 @@ export default function Router() {
                     <Route path="/haz-olvidado-tu-contraseña" component={passwordReset}/>
                 </Switch>
             </BrowserRouter>
+            <Footer/>
         </div>
     );
 };
