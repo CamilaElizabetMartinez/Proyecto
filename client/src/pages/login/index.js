@@ -1,47 +1,47 @@
 import React from 'react';
 import "./login.css";
-import { Link, useHistory, Redirect } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { useAuthContext } from "../../context/AuthContext";
 import { useForm } from "../../hooks/userForm";
-import {LOGIN_URL} from "../../settings";
+import { LOGIN_URL } from "../../settings";
 import jwt_decode from "jwt-decode";
 
 function Login() {
 
-    const formInitialState = {username: "", password: ""};
+    const formInitialState = { username: "", password: "" };
     const [form, handleChange] = useForm(formInitialState);
-    const {signIn, isAuthenticated, isAdmin, loginUser} = useAuthContext();
+    const { isAuthenticated, signIn } = useAuthContext();
     const history = useHistory();
 
     const handleSubmit = async e => {
         e.preventDefault();
-        
+
         const options = {
             method: "POST",
-            headers: {"Content-type": "application/json"},
+            headers: { "Content-type": "application/json" },
             body: JSON.stringify(form)
         }
 
         const response = await fetch(LOGIN_URL, options);
         const data = await response.json();
-        
-        if(response.status >= 200 && response.status < 300) {   
 
+
+        if (response.status >= 200 && response.status < 300) {
             const token = data.token;
             const user = jwt_decode(token);
 
             signIn(token, user);
-            
-            if  (user.roles.includes("ROLE_ADMIN")) {
-                history.push("/api/admin/product")
+
+            if (user.roles.includes("ROLE_ADMIN")) {
+                history.push("/producto/index")
             } else {
-                history.push("/product")
-            }  
-         
+                history.push("/")
+            }
+
         } else {
-            alert("Login incorrecto");
+            alert("Acceso incorrecto, verifique el email y la contraseña");
         }
-    }; 
+    };
 
     return (
         <div className="container">
@@ -55,17 +55,22 @@ function Login() {
                         <div className="inputBlock">
 
                             <label>Correo electrónico</label>
-                            <input onChange={handleChange} value={form.email} name="username" className="form" type="email" placeholder="" />
+                            <input onChange={handleChange} value={form.email} name="username" id="emailLogin" className="form" type="email" placeholder="tuemail@tuemail.com" required />
 
                             <label>Contraseña</label>
-                            <input onChange={handleChange} value={form.password} name="password" className="form" type="password" placeholder="*******"/>
-            
-                            <input className="form" type="submit" value="Acceder"/>
+                            <input onChange={handleChange} value={form.password} name="password" id="passwordLogin" className="form" type="password" placeholder="*******" required />
 
-                            <div>
+                            <div className="inputTermConditions">
+                                <input className="btnSubmit" type="submit" value="Acceder" />
+                            </div>
+
+                            <div className="inputTermConditions">
                                 <Link to="/passwordReset">¿Has olvidado tu contraseña?</Link>
+                            </div>
+                            <div className="inputTermConditions">
                                 <Link to="/unete-como-productor">¿Quieres ser productor?</Link>
                             </div>
+
                         </div>
 
                     </form>
