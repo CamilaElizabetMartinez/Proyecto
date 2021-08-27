@@ -1,0 +1,27 @@
+.btnCreateProduct{
+    padding: 5px 10px;
+    border-radius: 2px;
+    color: white;
+    text-align: center;
+    background-color: #f36f3f;
+    border: 1px solid #f15a23;
+    float: left !important;
+    margin-left: 5px !important;
+    font-family: sans-serif;
+}
+
+.btnCreateProduct:hover{
+    transform: scale(1.1);
+}
+
+.iconFa{
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    margin-left: 5px;
+}
+.iconFa::before{
+    content: "\f067";
+}
