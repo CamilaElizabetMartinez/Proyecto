@@ -1,6 +1,6 @@
 import React from 'react';
 import "./login.css";
-import { Link, useHistory } from 'react-router-dom';
+import { Link, useHistory, Redirect} from 'react-router-dom';
 import { useAuthContext } from "../../context/AuthContext";
 import { useForm } from "../../hooks/userForm";
 import { LOGIN_URL } from "../../settings";
@@ -43,7 +43,7 @@ function Login() {
         }
     };
 
-    return (
+    return isAuthenticated ? <Redirect to="/producto/index" /> : (
         <div className="container">
             <div className="row ">
                 <div className="mx-auto col-md-4">
