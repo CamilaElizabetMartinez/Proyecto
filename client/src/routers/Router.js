@@ -10,8 +10,9 @@ import joinAsAproducer from "../pages/joinAsAproducer";
 import aboutUs from "../pages/aboutUs";
 import login from "../pages/login";
 import passwordReset from "../pages/passwordReset";
-import createProduct from "../pages/createProduct";
-import productIndex from "../pages/admin/product/productIndex";
+import CreateProduct from "../pages/admin/product/createProduct";
+import ProductIndex from "../pages/admin/product/productIndex";
+import AdminRoute from "../pages/admin/adminRoute";
 
 
 export default function Router() {
@@ -28,8 +29,17 @@ export default function Router() {
                         <Route path="/quienes-somos" component={aboutUs} />
                         <Route path="/iniciar-sesion" component={login} />
                         <Route path="/haz-olvidado-tu-contraseña" component={passwordReset} />
-                        <Route path="/producto/crear" component={createProduct} />
-                        <Route path="/producto/index" component={productIndex} />
+                        
+                        <Route path="/producto/index" component={ProductIndex} /> 
+                        <Route path="/producto/crear" component={CreateProduct} /> 
+
+                      {/*   <AdminRoute path="/producto/index">
+                           <ProductIndex />
+                        </AdminRoute>
+                        <AdminRoute path="/producto/crear">
+                            <CreateProduct />
+                        </AdminRoute> */}
+
                     </Switch>
                 </BrowserRouter>
             </AuthContext>
