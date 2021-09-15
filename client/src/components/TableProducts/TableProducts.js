@@ -1,8 +1,8 @@
-import './listsproducts.css';
+import './tableproducts.css';
 import ButtonCreateProduct from "../ButtonCreateProduct/ButtonCreateProduct";
 import { useHistory } from "react-router-dom";
 
-function ListsProducts({ products }) {
+function TableProducts({ products }) {
 
     const history = useHistory();
 
@@ -53,4 +53,4 @@ function ListsProducts({ products }) {
 };
 
 
-export default ListsProducts;
+export default TableProducts;
