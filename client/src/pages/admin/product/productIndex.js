@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect } from "react";
 import { useAuthContext } from "../../../context/AuthContext";
 import { PRODUCT_INDEX_URL } from "../../../settings";
-import ListsProducts from '../../../components/ListsProducts/ListsProducts';
+import TableProducts from "../../../components/TableProducts/TableProducts"
 
 
 function ProductIndex() {
@@ -45,7 +45,7 @@ function ProductIndex() {
 
     return (
         <div>
-            <ListsProducts products={products} />
+            <TableProducts products={products} />
         </div>
     )
 }
