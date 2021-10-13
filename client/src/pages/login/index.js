@@ -10,7 +10,7 @@ function Login() {
 
     const formInitialState = { username: "", password: "" };
     const [form, handleChange] = useForm(formInitialState);
-    const { isAuthenticated, signIn } = useAuthContext();
+    const { signIn, isAuthenticated } = useAuthContext();
     const history = useHistory();
 
     const handleSubmit = async e => {
@@ -18,7 +18,7 @@ function Login() {
 
         const options = {
             method: "POST",
-            headers: { "Content-type": "application/json" },
+            headers: {"Content-type": "application/json"},
             body: JSON.stringify(form)
         }
 
