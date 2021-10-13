@@ -28,12 +28,10 @@ export default function AuthContext({ children }) {
     }
 
     const getAuthHeaders = (headers = {}) => {
-
         return { ...headers, Authorization: `Bearer ${getToken()}` }
     };
 
     useEffect(() => {
-
         const options = {
             method: "POST",
             headers: getAuthHeaders({
@@ -44,27 +42,34 @@ export default function AuthContext({ children }) {
 
         getToken() && fetch(VALIDATE_SESSION, options)
             .then(response => {
-                if (!response.ok) {
-                    throw new Error(response.statusText);
+                if (response.ok) {
+                    return response.json();
                 }
-                return response.json();
             })
         const token = getToken();
         const user = jwt_decode(token);
         signIn(token, user);
     }, []);
 
-    /*   useEffect(() => {
-  
-          if (getToken()){
-              const token = getToken();
-              const user = jwt_decode(token);
-              signIn(token, user);
-          }else{
-              signOut();
-          }
-          
-      }, []);  */
+    /*    useEffect(() => {
+   
+           const options = {
+               method: "POST",
+               headers: getAuthHeaders({
+                   "Content-type": "application/json",
+                   "Accept": 'application/json'
+               })
+           };
+   
+           if (getToken()) {
+               const token = getToken();
+               const user = jwt_decode(token);
+               signIn(token, user);
+           } else {
+               signOut();
+           }
+   
+       }, []);  */
 
     const contextValue = {
         loginUser,
