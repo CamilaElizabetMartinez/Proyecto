@@ -4,6 +4,8 @@ import { useHistory } from "react-router-dom";
 
 function TableProducts({ products }) {
 
+    console.log(products)
+
     const history = useHistory();
 
     const handleAdd = () => {
@@ -31,17 +33,15 @@ function TableProducts({ products }) {
                         </tr>
                     </thead>
                     <tbody id="tablebody">
-                        {products.map((products, index) => {
-                            return (
-                                <tr key={index}>
-                                    <td>{products.name}</td>
-                                    <td>{products.category_id}</td>
-                                    <td>{products.weight}</td>
-                                    <td>{products.price}</td>
-                                </tr>
-                            )
-                        })
-                        }
+                        {products.map(product => (
+                            <tr key={product.id}>
+                                <td>{product.name}</td>
+                                <td>{product.category_id}</td>
+                                <td>{product.weight}</td>
+                                <td>{product.price}</td>
+                            </tr>
+                        ))}
+
                     </tbody>
                     <tfoot></tfoot>
                 </table>
