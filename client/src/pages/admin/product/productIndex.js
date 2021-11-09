@@ -9,27 +9,7 @@ import TableProducts from "../../../components/TableProducts/TableProducts"
 function ProductIndex() {
 
     const [products, setProducts] = useState([]);
-
     const { getAuthHeaders, isAuthenticated } = useAuthContext();
-
-    /* const {getAuthHeaders, isAuthenticated } = useAuthContext();
-    const [products, setProducts] = useState("");
- */
-    /*  useEffect(() => {
- 
-         const options = {
-             headers: getAuthHeaders({
-                 "Content-type": "application/json",
-                 "Accept": 'application/json'
-             })
-         };
- 
-         fetch(PRODUCT_INDEX_URL, options)
-             .then(response => response.json())
-             .then(data => setProducts(data))
-     }, [])
-    */
-
     const history = useHistory();
 
     useEffect(() => {
@@ -41,7 +21,6 @@ function ProductIndex() {
                 return response.json();
             })
             .then(data => setProducts(data))
-            /* .then(data => console.log('data.message',data)) */
             .catch(err => {
                 return history.push("iniciar-sesion")
             });

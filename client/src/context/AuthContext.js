@@ -31,7 +31,8 @@ export default function AuthContext({ children }) {
         return { ...headers, Authorization: `Bearer ${getToken()}` }
     };
 
-    useEffect(() => {
+    //comente el useEffect para poder trabajar en la tabla de productos,luego descomentar.
+    /* useEffect(() => {
         const options = {
             method: "POST",
             headers: getAuthHeaders({
@@ -50,27 +51,27 @@ export default function AuthContext({ children }) {
         const user = jwt_decode(token);
         signIn(token, user);
     }, []);
+ */
 
-    /*    useEffect(() => {
-   
-           const options = {
-               method: "POST",
-               headers: getAuthHeaders({
-                   "Content-type": "application/json",
-                   "Accept": 'application/json'
-               })
-           };
-   
-           if (getToken()) {
-               const token = getToken();
-               const user = jwt_decode(token);
-               signIn(token, user);
-           } else {
-               signOut();
-           }
-   
-       }, []);  */
+    useEffect(() => {
+        // Recuperar la sesión y comprobar su validez
+        const options = {
+            headers: getAuthHeaders()
+        };
 
+        // si no hay token guardado, no hacemos la petición
+        getToken() && fetch(VALIDATE_SESSION, options)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(response.statusText);
+                }
+                return response.json();
+            })
+            .then(data => signIn(getToken())) // Token renovado
+            .catch(() => signOut()); // Limpiamos la sesión
+
+        }, []); 
+    
     const contextValue = {
         loginUser,
         isAuthenticated,

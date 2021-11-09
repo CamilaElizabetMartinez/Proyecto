@@ -80,6 +80,3 @@ function Login() {
     );
 };
 export default Login;
-
-//agregar fichero CSS y modificar las clases si hace falta.
-//me quede en la modificacion de login.
