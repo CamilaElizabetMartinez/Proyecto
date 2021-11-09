@@ -6,9 +6,15 @@ const VALIDATE_SESSION = API_BASE_URL + 'api/session';
 
 const PRODUCT_INDEX_URL = API_BASE_URL + 'api/product';
 
+const API_PRODUCTO_ADMIN = API_BASE_URL + 'api/admin/product';
+
+const CREAR_IMAGEN_PRODUCTO= API_BASE_URL + '/api/admin/image';
+
 export {
     API_BASE_URL,
     LOGIN_URL,
     PRODUCT_INDEX_URL,
     VALIDATE_SESSION,
+    API_PRODUCTO_ADMIN,
+    CREAR_IMAGEN_PRODUCTO
 };
