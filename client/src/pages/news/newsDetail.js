@@ -9,4 +9,6 @@ import Span from '../../components/Span/Span'
 const NewsDetail = () => {
     const { slug } = useParams();
 
+    const [news, setNews] = useState([]);
+
 export default NewsDetail;
