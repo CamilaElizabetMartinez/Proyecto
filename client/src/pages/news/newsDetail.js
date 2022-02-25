@@ -7,5 +7,6 @@ import Paragraph from '../../components/Paragraph/Paragraph'
 import Span from '../../components/Span/Span'
 
 const NewsDetail = () => {
+    const { slug } = useParams();
 
 export default NewsDetail;
