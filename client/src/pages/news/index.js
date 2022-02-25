@@ -16,9 +16,13 @@ const News = () => {
 
 function News() {
     return (
-        <div className="container">
-            <h1>Articulos</h1>
-            <p></p>
+        //Se realiza un map para renderizar una noticia
+        <div>
+            {news.map(theNews => (
+                <div key={theNews.id}>
+                    <Article theNews={theNews} />
+                </div>
+            ))}
         </div>
     );
 };
