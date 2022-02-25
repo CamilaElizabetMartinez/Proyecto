@@ -17,4 +17,14 @@ const NewsDetail = () => {
             .then(data => setNews(data));
     }, []);
 
+    return (
+        <div>
+            <Header3>{news.title}</Header3>
+            <Carousel images={news.images}></Carousel>
+            <Span>{news.creation_timestamp}</Span>
+            <Span>{news.subtitle}</Span>
+            <Paragraph>{news.description}</Paragraph>
+        </div>
+    )
+}
 export default NewsDetail;
