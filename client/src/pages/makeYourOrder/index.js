@@ -1,7 +1,10 @@
-import Cards from '../../components/Cards/Cards';
+import { useState, useEffect,useRef  } from 'react'
+import Card1 from '../../components/Card/Card1';
+import { INDEX_PRODUCT_PUBLIC, API_CATEGORY } from '../../settings'
 import './makeYourOrder.css';
 
-function MakeYourOrder() {
+const MakeYourOrder = () => {
+
     return (
         <div>
             <div className="bannerIndexMakeYourOrder banner" style={{ backgroundImage: "url(/Images/makeYourOrder/productoresbanner.jpg)" }}>
