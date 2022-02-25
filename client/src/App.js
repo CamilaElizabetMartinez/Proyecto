@@ -22,7 +22,9 @@ const App = () => {
 
   return (
     <div className="App">
-      <Router />
+      <AppProvider value={{ categories, setCategories }}>
+        <Router />
+      </AppProvider>
     </div>
   );
 };
