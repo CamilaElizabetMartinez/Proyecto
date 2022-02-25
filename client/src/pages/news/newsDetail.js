@@ -11,4 +11,10 @@ const NewsDetail = () => {
 
     const [news, setNews] = useState([]);
 
+    useEffect(() => {
+        fetch(INDEX_NEWS_PUBLIC + 'detail/' + `${slug}`)
+            .then(response => response.json())
+            .then(data => setNews(data));
+    }, []);
+
 export default NewsDetail;
