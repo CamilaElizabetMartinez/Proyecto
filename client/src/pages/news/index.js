@@ -13,8 +13,6 @@ const News = () => {
             //Se recupera las entidades de noticias
             .then(data => setNews(data.newsEntities))
     }, []);
-
-function News() {
     return (
         //Se realiza un map para renderizar una noticia
         <div>
