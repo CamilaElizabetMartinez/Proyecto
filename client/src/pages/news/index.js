@@ -1,4 +1,9 @@
-import React from "react";
+import React from 'react'
+import { useState, useEffect, useContext } from 'react'
+import Article from '../../components/Article/Article'
+import { INDEX_NEWS_PUBLIC } from '../../settings'
+
+const News = () => {
 
 function News() {
     return (
