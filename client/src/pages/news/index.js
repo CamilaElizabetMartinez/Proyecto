@@ -4,6 +4,8 @@ import Article from '../../components/Article/Article'
 import { INDEX_NEWS_PUBLIC } from '../../settings'
 
 const News = () => {
+    //Se declara el estado de noticias
+    const [ news, setNews ] = useState([]);
 
 function News() {
     return (
