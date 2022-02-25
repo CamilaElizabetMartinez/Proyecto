@@ -5,6 +5,7 @@ import {AppProvider} from './context/AppContext'
 import Router from './routers/Router'
 import './App.css'
 
+const App = () => {
   const [categories, setCategories] = useState(null);
 
 function App() {
