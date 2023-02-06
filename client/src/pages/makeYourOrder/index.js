@@ -5,6 +5,62 @@ import './makeYourOrder.css';
 
 const MakeYourOrder = () => {
 
+    //Se declara el estado de productos
+    const [products, setProducts] = useState([]);
+
+    let  inputText=useRef(null);
+
+    //Se realiza la consulta a la API
+    useEffect(() => {
+        fetch(INDEX_PRODUCT_PUBLIC)
+            .then(response => response.json())
+            //Se recupera las entidades de productos
+            .then(data => setProducts(data.productEntities))
+    }, []);
+
+    const handleSearch = async event => {
+        event.preventDefault();
+        const filterName = inputText.current.value;
+        const URL = INDEX_PRODUCT_PUBLIC + "?filterName=" + filterName;
+
+        fetch(URL)
+            .then(response => response.json())
+            .then(data => setProducts(data.productEntities));
+        ;
+    }
+    
+
+    const handleClickCategory = async event => {
+        event.preventDefault();
+
+        const categoryId = event.target.getAttribute("data-target-category-id");
+        const URL = INDEX_PRODUCT_PUBLIC + "?filterCategory=" + categoryId;
+
+        fetch(URL)
+            .then(response => response.json())
+            .then(data => setProducts(data.productEntities));
+        ;
+    }
+
+    const mapCategory = () => {
+        return (
+            categories.map(theCategory => (
+                <li data-target-category-id={theCategory.categoryId} onClick={handleClickCategory}
+                    key={theCategory.categoryId}>{theCategory.categoryName}
+                </li>
+            ))
+        )
+    }
+
+    //Se declara el estado de categorias
+    const [categories, setCategories] = useState([]);
+    //Se realiza la consulta a la API
+    useEffect(() => {
+        fetch(API_CATEGORY)
+            .then(response => response.json())
+            .then(data => setCategories(data));
+    }, []);
+
     return (
         <div>
             <div className="bannerIndexMakeYourOrder banner" style={{ backgroundImage: "url(/Images/makeYourOrder/productoresbanner.jpg)" }}>
@@ -13,11 +69,14 @@ const MakeYourOrder = () => {
                 </div>
             </div>
 
-            <div className="container">
+            <div>
+                <input type="text" ref={inputText}/>
+                <button type="button" onClick={handleSearch}>Buscar</button>
+            </div>
 
+            <div className="container">
                 <div className="row">
                     <div className="col-xl-4">
-
                         <div className="categoryList">
 
                             <div className="categorys">
@@ -25,24 +84,21 @@ const MakeYourOrder = () => {
                             </div>
                             <div className="ulLi">
                                 <ul>
-                                    <li><a href="https://developer.mozilla.org/">CERVEZA ARTESANAL</a></li>
-
-                                    <li><a href="https://developer.mozilla.org/">CONSERVA</a></li>
-                                    <li><a href="https://developer.mozilla.org/">FRUTA Y VERDURA</a></li>
-                                    <li><a href="https://developer.mozilla.org/">LECHE Y LACTEO</a></li>
-                                    <li><a href="https://developer.mozilla.org/">MIEL</a></li>
-                                    <li><a href="https://developer.mozilla.org/">VINO</a></li>
+                                    {categories && mapCategory()}
                                 </ul>
                             </div>
                         </div>
                     </div>
 
                     <div className="col-xl-8">
-                        <Cards />
+                        {products.map(product => (
+                            <div key={product.id}>
+                                <Card1 products={product} />
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
-
         </div>
     );
 };
