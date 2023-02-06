@@ -8,7 +8,7 @@ const PRODUCT_INDEX_URL = API_BASE_URL + 'api/product';
 
 const API_PRODUCTO_ADMIN = API_BASE_URL + 'api/admin/product';
 
-const API_PRODUCT_ADMIN = API_BASE_URL + 'api/admin/product';
+const API_CATEGORY = API_BASE_URL + 'api/category';
 
 export {
     API_BASE_URL,
