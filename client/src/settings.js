@@ -2,12 +2,11 @@ const API_BASE_URL = "http://comemoscomopensamos.local/";
 
 const LOGIN_URL = API_BASE_URL + 'api/login_check';
 
-const CHECK_TOKEN_URL = API_BASE_URL + '/token_check'
 const VALIDATE_SESSION = API_BASE_URL + 'api/session';
 
 const PRODUCT_INDEX_URL = API_BASE_URL + 'api/product';
 
-const API_PRODUCTO_ADMIN = API_BASE_URL + 'api/admin/product';
+const INDEX_PRODUCT_PUBLIC = API_BASE_URL + 'api/product';
 
 const CREAR_IMAGEN_PRODUCTO= API_BASE_URL + '/api/admin/image';
 
