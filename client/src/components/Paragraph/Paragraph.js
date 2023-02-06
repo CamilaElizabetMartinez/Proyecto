@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const Paragraph = ({children}) => {
     return (
@@ -6,6 +7,8 @@ const Paragraph = ({children}) => {
     )
 }
 
-Paragraph.propType = {
+Paragraph.propTypes = {
     children: PropTypes.string.isRequired
 }
+
+export default Paragraph;
