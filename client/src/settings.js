@@ -2,6 +2,7 @@ const API_BASE_URL = "http://comemoscomopensamos.local/";
 
 const LOGIN_URL = API_BASE_URL + 'api/login_check';
 
+const REGISTER_URL = API_BASE_URL + 'api/register'
 const VALIDATE_SESSION = API_BASE_URL + 'api/session';
 
 const PRODUCT_INDEX_URL = API_BASE_URL + 'api/product';
