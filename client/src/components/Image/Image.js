@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const Image = ({src}) => {
     return (
@@ -6,7 +7,7 @@ const Image = ({src}) => {
     )
 }
 
-Image.proptypes = {
+Image.propTypes = {
     src: PropTypes.string.isRequired
 }
 
