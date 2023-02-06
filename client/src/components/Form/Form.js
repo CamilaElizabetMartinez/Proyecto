@@ -4,7 +4,7 @@ import { useForm } from "../../hooks/userForm";
 import { API_CATEGORY, API_PRODUCT_ADMIN } from "../../settings";
 import { useHistory } from "react-router-dom";
 
-export default function NewProductForm({ setProducts }) {
+const NewProductForm = () => {
 
     const initialProductsState = {
         name: "",
@@ -57,3 +57,4 @@ export default function NewProductForm({ setProducts }) {
         </form>
     )
 }
+export default NewProductForm;
