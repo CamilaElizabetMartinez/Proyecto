@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useAuthContext } from "../../context/AuthContext";
 import { useForm } from "../../hooks/userForm";
 import { API_CATEGORY, API_PRODUCT_ADMIN } from "../../settings";
+import { useHistory } from "react-router-dom";
 
 export default function NewProductForm({ setProducts }) {
 
