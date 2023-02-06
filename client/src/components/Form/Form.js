@@ -6,14 +6,15 @@ import { useHistory } from "react-router-dom";
 
 const NewProductForm = () => {
 
-    const initialFormState = {
+    const initialProductsState = {
         name: "",
+        category_id: "",
         weight: "",
         price: "",
-        // img_principal: "",
-        category_id: ""
-    }
+        imageProduct: "",
+        img_principal: "",
 
+    const [form, handleInputChange] = useForm(initialFormState)
     }
 
     const [form, setForm] = useState(initialProductsState);
