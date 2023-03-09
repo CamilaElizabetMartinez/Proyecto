@@ -1,10 +1,10 @@
 import './tableproducts.css';
 import ButtonCreateProduct from "../ButtonCreateProduct/ButtonCreateProduct";
 import { useHistory } from "react-router-dom";
+// import { CategoriesContext } from '../../context/CategoryContext';
 
-function TableProducts({ products }) {
-
-    console.log(products)
+const TableProducts = ({ products }) => {
+    // const { categories } = useContext(CategoriesContext);
 
     const history = useHistory();
 
@@ -36,7 +36,7 @@ function TableProducts({ products }) {
                         {products.map(product => (
                             <tr key={product.id}>
                                 <td>{product.name}</td>
-                                <td>{product.category_id}</td>
+                                <td>{product.categoryName}</td>
                                 <td>{product.weight}</td>
                                 <td>{product.price}</td>
                             </tr>
@@ -50,7 +50,6 @@ function TableProducts({ products }) {
 
 
     )
-};
-
+}
 
 export default TableProducts;

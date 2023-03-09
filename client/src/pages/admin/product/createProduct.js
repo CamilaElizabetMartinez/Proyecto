@@ -1,6 +1,6 @@
 import Form from '../../../components/Form/Form';
 
-function CreateProduct() {
+const CreateProduct= () => {
     return ( 
         <div>
             <Form />

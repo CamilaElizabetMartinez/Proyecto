@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 const ButtonLink = ({to,children}) => {
     return (
@@ -9,9 +10,9 @@ const ButtonLink = ({to,children}) => {
     )
 }
 
-Button.propTypes = {
+ButtonLink.propTypes = {
     to: PropTypes.string.isRequired,
-    childre: PropTypes.string,isRequired
+    children: PropTypes.string.isRequired
 };
 
 export default ButtonLink;

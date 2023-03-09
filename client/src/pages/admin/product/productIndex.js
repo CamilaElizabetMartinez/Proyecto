@@ -2,11 +2,10 @@ import React from 'react';
 import { useState, useEffect } from "react";
 import { useAuthContext } from "../../../context/AuthContext";
 import { useHistory } from 'react-router-dom';
-import { PRODUCT_INDEX_URL } from "../../../settings";
+import { API_PRODUCT_ADMIN } from "../../../settings";
 import TableProducts from "../../../components/TableProducts/TableProducts"
 
-
-function ProductIndex() {
+const ProductIndex = () => {
 
     const [products, setProducts] = useState([]);
     const { getAuthHeaders, isAuthenticated } = useAuthContext();
@@ -15,7 +14,7 @@ function ProductIndex() {
     useEffect(() => {
         const options = { headers: getAuthHeaders() };
 
-        fetch(PRODUCT_INDEX_URL, options)
+        fetch(API_PRODUCT_ADMIN, options)
             .then(response => {
                 if (!response.ok) throw new Error(response.statusText)
                 return response.json();
@@ -26,11 +25,8 @@ function ProductIndex() {
             });
     }, [isAuthenticated, getAuthHeaders])
 
-    console.log('valor products:',products)
     return (
-        <div>
-            <TableProducts products={products} />
-        </div>
+        <TableProducts products={products} />
     )
 }
 export default ProductIndex;

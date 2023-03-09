@@ -1,29 +1,49 @@
 import { createContext, useState, useContext, useEffect } from "react";
-import { VALIDATE_SESSION } from "../settings";
-import jwt_decode from "jwt-decode";
+import { CHECK_TOKEN_URL } from "../settings";
 
 const LoginContext = createContext(null);
 
 export default function AuthContext({ children }) {
 
-    const [loginUser, setLoginUser] = useState({});
+    // const [loginUser, setLoginUser] = useState({});
+    // const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+    // const getToken = () => localStorage.getItem("TOKEN_KEY");
+    // const setToken = token => localStorage.setItem("TOKEN_KEY", token);
+    // const removeToken = () => localStorage.removeItem("TOKEN_KEY");
+
+    // const isAdmin = () => loginUser?.role === "ADMIN";
+
+    // const signIn = (token, user) => {
+    //     setToken(token);
+    //     setLoginUser(user);
+    //     setIsAuthenticated(true);
+    // }
+
+    // const signOut = () => {
+    //     removeToken();
+    //     setLoginUser({});
+    //     setIsAuthenticated(false);
+    // }
+
+    // const [loginUser, setLoginUser] = useState({});
     const [isAuthenticated, setIsAuthenticated] = useState(false);
 
     const getToken = () => localStorage.getItem("TOKEN_KEY");
     const setToken = token => localStorage.setItem("TOKEN_KEY", token);
     const removeToken = () => localStorage.removeItem("TOKEN_KEY");
 
-    const isAdmin = () => loginUser?.role === "ADMIN";
+    const signIn = (token) => {
 
-    const signIn = (token, user) => {
         setToken(token);
-        setLoginUser(user);
+        // setLoginUser(user);
         setIsAuthenticated(true);
     }
 
     const signOut = () => {
+
         removeToken();
-        setLoginUser({});
+        // setLoginUser({});
         setIsAuthenticated(false);
     }
 
@@ -53,6 +73,25 @@ export default function AuthContext({ children }) {
     }, []);
  */
 
+    // useEffect(() => {
+    //     Recuperar la sesión y comprobar su validez
+    //     const options = {
+    //         headers: getAuthHeaders()
+    //     };
+
+    //     si no hay token guardado, no hacemos la petición
+    //     getToken() && fetch(VALIDATE_SESSION, options)
+    //         .then(response => {
+    //             if (!response.ok) {
+    //                 throw new Error(response.statusText);
+    //             }
+    //             return response.json();
+    //         })
+    //         .then(data => signIn(getToken())) // Token renovado
+    //         .catch(() => signOut()); // Limpiamos la sesión
+
+    // }, []);
+
     useEffect(() => {
         // Recuperar la sesión y comprobar su validez
         const options = {
@@ -60,7 +99,7 @@ export default function AuthContext({ children }) {
         };
 
         // si no hay token guardado, no hacemos la petición
-        getToken() && fetch(VALIDATE_SESSION, options)
+        getToken() && fetch(CHECK_TOKEN_URL, options)
             .then(response => {
                 if (!response.ok) {
                     throw new Error(response.statusText);
@@ -70,12 +109,13 @@ export default function AuthContext({ children }) {
             .then(data => signIn(getToken())) // Token renovado
             .catch(() => signOut()); // Limpiamos la sesión
 
-        }, []); 
-    
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
     const contextValue = {
-        loginUser,
+        // loginUser,
+        // isAdmin,
         isAuthenticated,
-        isAdmin,
         getToken,
         signIn,
         signOut,

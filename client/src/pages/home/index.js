@@ -1,12 +1,11 @@
-import Carousel from '../../components/Carousel/Carousel';
-import Card from '../../components/Card/Card';
 import './home.css';
+import Carousel from '../../components/Carousel/Carousel';
 
-function Home() {
+const Home = () => {
   return (
     <div>
       <section id="carousel">
-        <Carousel />
+        <Carousel />  
       </section>
 
       <section id="featuredProducers">
@@ -20,7 +19,7 @@ function Home() {
             </div>
           </div>
           <div className="row">
-            <Card />
+            
           </div>
         </div>
       </section>
